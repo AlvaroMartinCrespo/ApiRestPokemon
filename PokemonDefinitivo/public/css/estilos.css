@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.containerCartas {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: '. . .';
+  gap: 40px;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.containerFooter {
+  margin: 0;
+  padding: 0;
+}
+
+.invisble {
+  display: none;
+}
+
+.card {
+  width: 400px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 25px;
+}
+
+.containerForm {
+  height: 70vh;
+  margin-top: 50px;
+}
+
+.types {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    '. . . . . . . . .'
+    '. . . . . . . . .'
+    '. . . . . . . . .';
+}

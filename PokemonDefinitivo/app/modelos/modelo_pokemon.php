@@ -66,14 +66,16 @@ class ModeloPokemon
             $response = json_decode($response);
             curl_close($ch);
 
-            $html .= '        <div class="pokemon">
-            <a href="./?controlador=pokemon&metodo=ver&id=' . $response->id . '">
-                <img class="imgPokemon" src="' . $response->sprites->front_default . '">
-            </a>
-
-            <a class="nombrePokemon" href="./?controlador=pokemon&metodo=ver&id=' . $response->id . '">' . $responseApi->results[$i]->name . '</a>
-            <span class="tipo ' . $response->types[0]->type->name . '">' . $response->types[0]->type->name . '</span>
-            </div>';
+            $html .= '        <div>
+            <div class="card">
+                <img class="card-img-top" src="' . $response->sprites->front_default . '" alt="Imagen de la tarjeta" />
+                <div class="card-body d-flex justify-content-center align-items-center flex-column">
+                    <h5 class="card-title">' . $responseApi->results[$i]->name . '</h5>
+                    <p class="card-text">' . $response->types[0]->type->name . '</p>
+                    <a href="./?controlador=pokemon&metodo=ver&id=' . $response->id . '" class="btn btn-primary">Detalles</a>
+                </div>
+            </div>
+        </div>';
         }
 
         $_SESSION['next'] = $responseApi->next;
